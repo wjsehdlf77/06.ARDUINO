@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "chapter04"
+		},
+		{
+			"path": "..\\..\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.html": "django-html",
+			"*.tcc": "cpp"
+		}
+	}
+}

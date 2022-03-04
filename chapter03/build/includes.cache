@@ -1,0 +1,27 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\variants\\standard"
+  },
+  {
+    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter03\\build\\sketch\\app.ino.cpp",
+    "Include": "SimpleTimer.h",
+    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\SimpleTimer"
+  },
+  {
+    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter03\\build\\sketch\\app.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\SimpleTimer\\SimpleTimer.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
