@@ -1,8 +1,7 @@
-# 1 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
-# 3 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
-# 4 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
-# 5 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
+#include <MiniCom.h>
+#include <Analog.h>
+#include <Button.h>
+#include <Servo.h>
 
 MiniCom com;
 Analog x(A2, 180, 0); //서브모터 방향제어
@@ -25,7 +24,7 @@ void check() {
     char buf[17];
     sprintf(buf, "%d, %d [%d]", dx, dy, sw);
     com.print(1, buf);
-
+    
 
 }
 
