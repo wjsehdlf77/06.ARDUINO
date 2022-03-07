@@ -1,11 +1,12 @@
-# 1 "c:\\workspace\\06.ARDUINO\\chapter05\\rfid\\ex01\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\chapter05\\rfid\\ex01\\app.ino" 2
-# 3 "c:\\workspace\\06.ARDUINO\\chapter05\\rfid\\ex01\\app.ino" 2
-# 4 "c:\\workspace\\06.ARDUINO\\chapter05\\rfid\\ex01\\app.ino" 2
+#include <SPI.h>
+#include <MFRC522.h>
+#include <Buzzer.h>
+#include <Servo.h>
 
+#define RST_PIN 9
+#define SS_PIN 10
 
-
-MFRC522 mfrc(10, 9);
+MFRC522 mfrc(SS_PIN, RST_PIN);
 Buzzer bizzer(3);
 
 byte myId[] = {49, 181, 185, 26};
@@ -32,7 +33,7 @@ void loop()
         delay(500);
         return;
     }
-
+    
     if (equalId(myId, mfrc.uid.uidByte)) {
         Serial.println("Equal");
         bizzer.beep(100);
@@ -50,3 +51,5 @@ void loop()
 
     // Serial.println();
 }
+
+//수행평가 여기까지 servo모터까지 만든거를 클래스로 정의 RFID Reader

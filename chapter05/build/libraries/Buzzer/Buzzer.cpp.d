@@ -1,6 +1,6 @@
-c:\workspace\06.ARDUINO\chapter05\build\libraries\Led\Led.cpp.o: \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\Led\Led.cpp \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\Led\Led.h \
+c:\workspace\06.ARDUINO\chapter05\build\libraries\Buzzer\Buzzer.cpp.o: \
+ C:\Users\doyle\OneDrive\문서\Arduino\libraries\Buzzer\Buzzer.cpp \
+ C:\Users\doyle\OneDrive\문서\Arduino\libraries\Buzzer\Buzzer.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \

@@ -11,8 +11,18 @@
   },
   {
     "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
-    "Include": "Led.h",
-    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Led"
+    "Include": "SPI.h",
+    "Includepath": "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\src"
+  },
+  {
+    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
+    "Include": "MFRC522.h",
+    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\MFRC522\\src"
+  },
+  {
+    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
+    "Include": "Buzzer.h",
+    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Buzzer"
   },
   {
     "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
@@ -20,7 +30,22 @@
     "Includepath": null
   },
   {
-    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Led\\Led.cpp",
+    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\MFRC522\\src\\MFRC522.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\MFRC522\\src\\MFRC522Extended.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Buzzer\\Buzzer.cpp",
     "Include": "",
     "Includepath": null
   }
