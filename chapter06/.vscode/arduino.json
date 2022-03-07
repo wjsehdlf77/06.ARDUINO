@@ -1,5 +1,5 @@
 {
-    "sketch": "pir//ex02//app.ino",
+    "sketch": "ultra//ex01//app.ino",
     "output": "build",
     "board": "arduino:avr:uno",
     "port": "COM8"

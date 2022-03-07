@@ -1,5 +1,3 @@
-#include <Arduino.h>
-#line 1 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
 #include <MiniCom.h>
 
 MiniCom com;
@@ -8,13 +6,6 @@ int echoPin = 5;
 int triggerPin = 6;
 
 
-#line 9 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
-void check();
-#line 19 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
-void setup();
-#line 28 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
-void loop();
-#line 9 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
 void check()
 {
     digitalWrite(triggerPin, HIGH);

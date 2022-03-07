@@ -31,16 +31,6 @@
   },
   {
     "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter06\\build\\sketch\\app.ino.cpp",
-    "Include": "Led.h",
-    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Led"
-  },
-  {
-    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter06\\build\\sketch\\app.ino.cpp",
-    "Include": "Pir.h",
-    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Pir"
-  },
-  {
-    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter06\\build\\sketch\\app.ino.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -66,16 +56,6 @@
   },
   {
     "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\SimpleTimer\\SimpleTimer.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Led\\Led.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Pir\\Pir.cpp",
     "Include": "",
     "Includepath": null
   }

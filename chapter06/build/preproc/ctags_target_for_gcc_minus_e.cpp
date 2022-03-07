@@ -1,30 +1,32 @@
-# 1 "c:\\workspace\\06.ARDUINO\\chapter06\\pir\\ex02\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\chapter06\\pir\\ex02\\app.ino" 2
-# 3 "c:\\workspace\\06.ARDUINO\\chapter06\\pir\\ex02\\app.ino" 2
-# 4 "c:\\workspace\\06.ARDUINO\\chapter06\\pir\\ex02\\app.ino" 2
+# 1 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
+# 2 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino" 2
 
 MiniCom com;
-Led led(8);
-Pir pir(7);
 
-void detect_on() {
-    com.print(1, "Motion detected!");
-    led.on();
+int echoPin = 5;
+int triggerPin = 6;
+
+
+void check()
+{
+    digitalWrite(triggerPin, 0x1);
+    delayMicroseconds(10);
+    digitalWrite(triggerPin, 0x0);
+
+    int distance = pulseIn(echoPin, 0x1) / 58;
+    com.print(1, "Dist.(cm) = ", distance);
 }
 
-void detect_off() {
-    com.print(1, "Motion ended!");
-    led.off();
-}
 void setup()
 {
     com.init();
-    com.print(0, "[[Motion]]");
-    pir.setCallback(detect_on, detect_off);
+    com.print(0, "[[Distance]]");
+    com.setInterval(1000, check);
+    pinMode(echoPin, 0x0);
+    pinMode(triggerPin, 0x1);
 }
 
 void loop()
 {
     com.run();
-    pir.check();
 }
