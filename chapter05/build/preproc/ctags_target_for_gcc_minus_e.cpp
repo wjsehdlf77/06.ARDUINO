@@ -1,44 +1,20 @@
-# 1 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
-# 3 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
-# 4 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
-# 5 "c:\\workspace\\06.ARDUINO\\chapter05\\joystick\\ex02\\app.ino" 2
-
+# 1 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino"
+# 2 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino" 2
 MiniCom com;
-Analog x(A2, 180, 0); //서브모터 방향제어
-// Analog x(A2, -100, 100);
-Analog y(A1,100, -100); //rc카의 속도 빛 방향제어
-Button z(A0);
-Servo servo;
-
-int servo_pin = 5;
-
+const int lm35_pin = A1; // LM35DZ 연결핀
 void check() {
-    int dx, dy;
-    boolean sw;
-
-    dx = x.read();
-    dy = y.read();
-    sw = z.read();
-    servo.write(dx);
-
-    char buf[17];
-    sprintf(buf, "%d, %d [%d]", dx, dy, sw);
-    com.print(1, buf);
-
-
+// LM35DZ 온도센서 측정
+int value = analogRead(lm35_pin); // 온도센서 디지털 값
+float ftp = (float)value / 1024.0 * 5.0; // 온도센서 전압값
+ftp = ftp * 100.0 + 0.5; // 온도값(1도/10mv)
+com.print(1, "T: ", ftp);
 }
-
-void setup()
-{
-    com.init();
-    servo.attach(servo_pin);
-    com.setInterval(100, check);
-    com.print(0, "[[Joystick]]");
-
+void setup() {
+com.init();
+com.setInterval(2000, check);
+com.print(0, "[[LM35]]");
+com.print(1, "Preparing LM35");
 }
-
-void loop()
-{
-    com.run();
+void loop() {
+com.run();
 }

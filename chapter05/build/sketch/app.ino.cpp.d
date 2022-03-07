@@ -16,8 +16,4 @@ c:\workspace\06.ARDUINO\chapter05\build\sketch\app.ino.cpp.o: \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Print.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src/Wire.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\SimpleTimer/SimpleTimer.h \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\Analog/Analog.h \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\Button/Button.h \
- C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/Servo.h \
- C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/avr/ServoTimers.h
+ C:\Users\doyle\OneDrive\문서\Arduino\libraries\SimpleTimer/SimpleTimer.h

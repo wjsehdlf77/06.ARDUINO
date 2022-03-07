@@ -1,15 +1,6 @@
-#include <Arduino.h>
-#line 1 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino"
 #include <MiniCom.h>
 MiniCom com;
 const int lm35_pin = A1; // LM35DZ 연결핀
-#line 4 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino"
-void check();
-#line 11 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino"
-void setup();
-#line 17 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino"
-void loop();
-#line 4 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino"
 void check() {
 // LM35DZ 온도센서 측정
 int value = analogRead(lm35_pin); // 온도센서 디지털 값

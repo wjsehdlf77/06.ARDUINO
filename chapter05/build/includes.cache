@@ -31,21 +31,6 @@
   },
   {
     "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
-    "Include": "Analog.h",
-    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Analog"
-  },
-  {
-    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
-    "Include": "Button.h",
-    "Includepath": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Button"
-  },
-  {
-    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
-    "Include": "Servo.h",
-    "Includepath": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src"
-  },
-  {
-    "Sourcefile": "c:\\workspace\\06.ARDUINO\\chapter05\\build\\sketch\\app.ino.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -71,51 +56,6 @@
   },
   {
     "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\SimpleTimer\\SimpleTimer.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Analog\\Analog.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\doyle\\OneDrive\\문서\\Arduino\\libraries\\Button\\Button.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src\\avr\\Servo.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src\\mbed\\Servo.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src\\megaavr\\Servo.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src\\nrf52\\Servo.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src\\sam\\Servo.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src\\samd\\Servo.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Program Files (x86)\\Arduino\\libraries\\Servo\\src\\stm32f4\\Servo.cpp",
     "Include": "",
     "Includepath": null
   }
