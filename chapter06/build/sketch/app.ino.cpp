@@ -1,40 +1,39 @@
 #include <Arduino.h>
-#line 1 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
+#line 1 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
 #include <MiniCom.h>
+#include <Ultra.h>
+
 
 MiniCom com;
+Ultra ultra(5, 6);
 
-int echoPin = 5;
-int triggerPin = 6;
-
-
-#line 9 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
-void check();
-#line 19 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
+#line 8 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
+void notice_in();
+#line 13 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
+void notice_out();
+#line 17 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
 void setup();
-#line 28 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
+#line 24 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
 void loop();
-#line 9 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
-void check()
+#line 8 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
+void notice_in()
 {
-    digitalWrite(triggerPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(triggerPin, LOW);
+    com.print(1, "NOTICE IN");
+}
 
-    int distance = pulseIn(echoPin, HIGH) / 58;
-    com.print(1, "Dist.(cm) = ", distance);
+void notice_out() {
+    com.print(1, "NOTICE OUT");
 }
 
 void setup()
 {
     com.init();
     com.print(0, "[[Distance]]");
-    com.setInterval(1000, check);
-    pinMode(echoPin, INPUT);
-    pinMode(triggerPin, OUTPUT);
+    ultra.setThreshold(40, notice_in, notice_out);
 }
 
 void loop()
 {
     com.run();
+    ultra.run();
 }

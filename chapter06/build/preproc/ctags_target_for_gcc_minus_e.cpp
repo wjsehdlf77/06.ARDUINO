@@ -1,32 +1,29 @@
-# 1 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex01\\app.ino" 2
+# 1 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
+# 2 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino" 2
+# 3 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino" 2
+
 
 MiniCom com;
+Ultra ultra(5, 6);
 
-int echoPin = 5;
-int triggerPin = 6;
-
-
-void check()
+void notice_in()
 {
-    digitalWrite(triggerPin, 0x1);
-    delayMicroseconds(10);
-    digitalWrite(triggerPin, 0x0);
+    com.print(1, "NOTICE IN");
+}
 
-    int distance = pulseIn(echoPin, 0x1) / 58;
-    com.print(1, "Dist.(cm) = ", distance);
+void notice_out() {
+    com.print(1, "NOTICE OUT");
 }
 
 void setup()
 {
     com.init();
     com.print(0, "[[Distance]]");
-    com.setInterval(1000, check);
-    pinMode(echoPin, 0x0);
-    pinMode(triggerPin, 0x1);
+    ultra.setThreshold(40, notice_in, notice_out);
 }
 
 void loop()
 {
     com.run();
+    ultra.run();
 }

@@ -2,26 +2,27 @@
 #include <Ultra.h>
 
 
-
 MiniCom com;
 Ultra ultra(5, 6);
 
-
-void check()
+void notice_in()
 {
-    int distance = ultra.getDistance();
-    com.print(1, "Dist.(cm", distance);
-    
+    com.print(1, "NOTICE IN");
+}
+
+void notice_out() {
+    com.print(1, "NOTICE OUT");
 }
 
 void setup()
 {
     com.init();
     com.print(0, "[[Distance]]");
-    com.setInterval(1000, check);
+    ultra.setThreshold(40, notice_in, notice_out);
 }
 
 void loop()
 {
     com.run();
+    ultra.run();
 }
