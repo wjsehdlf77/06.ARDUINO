@@ -11,8 +11,4 @@ c:\workspace\06.ARDUINO\chapter05\build\sketch\app.ino.cpp.o: \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/USBAPI.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\standard/pins_arduino.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src/SPI.h \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\MFRC522\src/MFRC522.h \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\MFRC522\src/require_cpp11.h \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\MFRC522\src/deprecated.h \
- C:\Users\doyle\OneDrive\문서\Arduino\libraries\Buzzer/Buzzer.h
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\EEPROM\src/EEPROM.h

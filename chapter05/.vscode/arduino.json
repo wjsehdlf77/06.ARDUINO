@@ -1,5 +1,5 @@
 {
-    "sketch": "rfid//ex01//app.ino",
+    "sketch": "rfid//ex02//app.ino",
     "output": "build",
     "board": "arduino:avr:uno",
     "port": "COM8"
