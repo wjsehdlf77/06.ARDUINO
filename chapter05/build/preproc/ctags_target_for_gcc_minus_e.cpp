@@ -1,20 +1,19 @@
-# 1 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\chapter05\\dht\\ex02\\app.ino" 2
-MiniCom com;
-const int lm35_pin = A1; // LM35DZ 연결핀
-void check() {
-// LM35DZ 온도센서 측정
-int value = analogRead(lm35_pin); // 온도센서 디지털 값
-float ftp = (float)value / 1024.0 * 5.0; // 온도센서 전압값
-ftp = ftp * 100.0 + 0.5; // 온도값(1도/10mv)
-com.print(1, "T: ", ftp);
+# 1 "c:\\workspace\\06.ARDUINO\\chapter05\\tilt\\ex01\\app.ino"
+# 2 "c:\\workspace\\06.ARDUINO\\chapter05\\tilt\\ex01\\app.ino" 2
+
+Led led(9);
+
+const int tilt_pin = 4;
+
+void setup()
+{
+    pinMode(tilt_pin, 0x0);
 }
-void setup() {
-com.init();
-com.setInterval(2000, check);
-com.print(0, "[[LM35]]");
-com.print(1, "Preparing LM35");
-}
-void loop() {
-com.run();
+
+void loop()
+{
+    bool t_sw;
+
+    t_sw = digitalRead(tilt_pin);
+    led.setValue(t_sw);
 }

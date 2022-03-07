@@ -1,5 +1,5 @@
 {
-    "sketch": "dht//ex02//app.ino",
+    "sketch": "tilt//ex01//app.ino",
     "output": "build",
     "board": "arduino:avr:uno",
     "port": "COM8"
