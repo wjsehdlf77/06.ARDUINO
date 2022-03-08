@@ -1,5 +1,3 @@
-#include <Arduino.h>
-#line 1 "c:\\workspace\\06.ARDUINO\\chapter06\\dcmotor\\ex01\\app.ino"
 #include <Car.h>
 
 // int ENAPin = 9;
@@ -12,11 +10,6 @@
 
 Car car(9, 8 ,7, 3, 5, 4);
 
-#line 13 "c:\\workspace\\06.ARDUINO\\chapter06\\dcmotor\\ex01\\app.ino"
-void setup();
-#line 18 "c:\\workspace\\06.ARDUINO\\chapter06\\dcmotor\\ex01\\app.ino"
-void loop();
-#line 13 "c:\\workspace\\06.ARDUINO\\chapter06\\dcmotor\\ex01\\app.ino"
 void setup()
 {
     car.stop();

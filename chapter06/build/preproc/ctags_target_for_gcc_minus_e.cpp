@@ -1,29 +1,42 @@
-# 1 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino" 2
-# 3 "c:\\workspace\\06.ARDUINO\\chapter06\\ultra\\ex04\\app.ino" 2
+# 1 "c:\\workspace\\06.ARDUINO\\chapter06\\dcmotor\\ex01\\app.ino"
+# 2 "c:\\workspace\\06.ARDUINO\\chapter06\\dcmotor\\ex01\\app.ino" 2
 
+// int ENAPin = 9;
+// int in1Pin = 8;
+// int in2Pin = 7;
 
-MiniCom com;
-Ultra ultra(5, 6);
+// int ENBPin = 3;
+// int in3Pin = 5;
+// int in4Pin = 4;
 
-void notice_in()
-{
-    com.print(1, "NOTICE IN");
-}
-
-void notice_out() {
-    com.print(1, "NOTICE OUT");
-}
+Car car(9, 8 ,7, 3, 5, 4);
 
 void setup()
 {
-    com.init();
-    com.print(0, "[[Distance]]");
-    ultra.setThreshold(40, notice_in, notice_out);
+    car.stop();
 }
 
 void loop()
 {
-    com.run();
-    ultra.run();
+    car.forward();
+
+    delay(1000);
+
+    car.backward();
+
+    delay(1000);
+
+    car.turn_left();
+
+    delay(1000);
+
+    car.turn_right();
+
+    delay(1000);
+
+    car.stop();
+
+    delay(5000);
+
+
 }

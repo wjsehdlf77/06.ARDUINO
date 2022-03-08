@@ -1,5 +1,5 @@
 {
-    "sketch": "ultra//ex04//app.ino",
+    "sketch": "dcmotor\\ex01\\app.ino",
     "output": "build",
     "board": "arduino:avr:uno",
     "port": "COM8"
