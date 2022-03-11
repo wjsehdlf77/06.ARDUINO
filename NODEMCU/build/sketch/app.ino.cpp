@@ -28,9 +28,9 @@ if (isnan(fh) || isnan(fc)) { // 측정 실패시에는 출력없이 리턴
 Serial.println("DHT11 read failed!!");
 return;
 }
-com.publish("iot/temp", fc);
-com.publish("iot/humi", fh);
-com.publish("iot/illu", illu);
+com.publish("iot/doyle/livingroom/temp", fc);
+com.publish("iot/doyle/livingroom/humi", fh);
+com.publish("iot/doyle/livingroom/illu", illu);
 }
 
 void setup() {
