@@ -1,41 +1,44 @@
-# 1 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex03\\app.ino"
-# 2 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex03\\app.ino" 2
+# 1 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
+# 2 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino" 2
+# 3 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino" 2
+# 4 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino" 2
 
 const char *ssid = "1309호";
 const char *password = "ttolla5405!";
+const char *mqtt_server = "192.168.0.4";
 
-WifiMiniCom com;
-WiFiServer server(80);
+MqttCom com;
+DHT dht11(D6, DHT11); // DHT11 객체 생성
+Analog cds(A0,0, 100);
 
-void setup()
-{
-    com.init(ssid, password);
-    server.begin();
+void publish() {
+float fh, fc;
+fh = dht11.readHumidity(); // 습도 측정
+fc = dht11.readTemperature(); // 섭씨 온도 측정
+int illu = cds.read(); // 조도 측정
+if (isnan(fh) || isnan(fc)) { // 측정 실패시에는 출력없이 리턴
+Serial.println("DHT11 read failed!!");
+return;
+}
+com.publish("iot/temp", fc);
+com.publish("iot/humi", fh);
+com.publish("iot/illu", illu);
 }
 
-void loop()
-{
-    WiFiClient client = server.available();
-    if (!client) {
-        return;
-    }
-
-    Serial.println("new clinet");
-    while (!client.available()) {
-        delay(1);
-    }
-    String request = client.readStringUntil('\r');
-    Serial.println(request);
-    client.flush();
-
-    client.println("HTTP/1.1 200 OK");
-    client.println("Content-Type: text/html");
-    client.println("");
-    client.println("<!DOCTYPE HTML>");
-    client.println("<html>");
-    client.print("HELLO WORLD!");
-    client.println("</html>");
-    delay(1);
-    Serial.println("Client disonnected");
-    Serial.println("");
+void setup() {
+com.init(ssid, password);
+com.setServer(mqtt_server, 
+# 29 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino" 3 4
+                          __null
+# 29 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
+                              , 
+# 29 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino" 3 4
+                                __null
+# 29 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
+                                    );
+com.setInterval(2000, publish);
+dht11.begin();
+}
+void loop() {
+com.run();
 }

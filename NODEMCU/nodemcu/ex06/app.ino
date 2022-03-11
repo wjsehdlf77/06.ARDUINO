@@ -1,5 +1,3 @@
-#include <Arduino.h>
-#line 1 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
 #include <MqttCom.h>
 #include <DHT.h>
 #include <Analog.h>
@@ -12,13 +10,6 @@ MqttCom com;
 DHT dht11(D6, DHT11); // DHT11 객체 생성
 Analog cds(A0,0, 100);
 
-#line 13 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
-void publish();
-#line 27 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
-void setup();
-#line 33 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
-void loop();
-#line 13 "c:\\workspace\\06.ARDUINO\\NODEMCU\\nodemcu\\ex06\\app.ino"
 void publish() {
 float fh, fc;
 fh = dht11.readHumidity(); // 습도 측정
